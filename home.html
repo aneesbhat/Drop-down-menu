@@ -1,0 +1,117 @@
+<html>
+<html>
+<head>
+    <title>Drop Down Menu</title>
+    <style>
+        * {
+            padding:0px;
+            margin:0px;
+            box-sizing:border-box;
+            font-family:sans-serif;
+            list-style:none;
+        }
+
+        .main {
+            width:1170px;
+            margin:auto;
+            border:1px solid red;
+        }
+
+        nav>ul {
+            display:flex;
+            gap:10px;
+            
+        }
+
+        nav>ul>li {
+            margin:auto;
+            position: relative;
+        }
+
+        .sub-menu {
+            position:absolute;
+            top:19px;
+            left:-50px;
+            background-color:lightgreen;
+            width:200px;
+            text-align:center;
+            transform:translateY(50px);
+            opacity:0;
+            visibility:hidden;
+            transition:0.5s;
+
+
+        }
+
+        .sub {
+            position:absolute;
+            top:19px;
+            left:-50px;
+            background-color:lightblue;
+            width:200px;
+            text-align:center;
+            transform:translateY(50px);
+            opacity:0;
+            visibility:hidden;
+            transition:0.5s;
+
+
+        }
+
+        nav>ul>li:hover .sub {
+            opacity:1;
+            visibility:visible;
+            transform:translateY(0px);
+        }
+
+        .sub-menu>li {
+            padding:10px;
+        }
+
+        nav>ul>li:hover .sub-menu {
+            opacity:1;
+            visibility:visible;
+            transform:translateY(0px);
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+
+
+        <div class="main">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Gallery
+                        <ul class="sub">
+                            <li>Mern Stack</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>Java</li>
+                        </ul>
+                    </li>
+                    <li>About Us</li>
+                    <li>Enquiry
+                    <ul class="sub-menu">
+                        <li>Mern Stack</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>Java</li>
+                    </ul>
+                </li>
+                    <li>Contact Us</li>
+
+                </ul>
+            </nav>
+        </div>
+
+
+
+    </main>
+    
+</body>
+</html>
